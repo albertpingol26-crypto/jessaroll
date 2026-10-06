@@ -1,0 +1,66 @@
+/* A quiet white page with a playful pink accent. */
+:root{--cream:#fff;--ink:#382335;--rose:#bc2477;--sage:#78526b;--line:#f1dce8}
+body{background:#fff;color:var(--ink)}
+header{position:absolute;background:#ffffffef;border-bottom:1px solid #f5e6ef;height:78px}
+.brand{font-size:24px}.brand span,footer>span{color:var(--rose)}
+nav{gap:26px}nav a{color:#68445e}nav a:hover{color:#bc2477}
+.hero{background:#fff;min-height:730px;height:90svh;max-height:940px}
+.garden{inset:0;width:100%;height:100%;opacity:1;background-image:url('white-flower-garden.png');background-size:cover;background-position:center;background-repeat:no-repeat;mask-image:none;-webkit-mask-image:none}
+.hero:after{background:linear-gradient(transparent 85%,#fff);pointer-events:none}
+.hero-content{padding:95px 24px 70px;max-width:800px}
+h1{font-size:clamp(50px,6vw,78px);letter-spacing:-1.4px}h1,h2{font-weight:400}
+em,.handwritten,.text-button{color:#bc2477}
+.eyebrow{font-size:10px;letter-spacing:2px;color:#a13d77}
+.intro,.section-intro,.letter-intro p:not(.eyebrow),.closing p{color:#6d5265}
+.button,.envelope .button{background:#c42a80;color:#fff;border-radius:9px;box-shadow:none;gap:20px;padding:13px 24px}
+.button:hover,.envelope .button:hover{background:#a31b69;transform:translateY(-2px)}
+.hero-note,.translation,footer p{color:#826477}
+.little-flower,.branch,.envelope-flower,.closing>span,.scroll,#petals,#motion{display:none}
+.words{padding:85px 24px 70px}.section-intro{margin-bottom:35px}
+h2{font-size:clamp(36px,4vw,49px)}
+.verse-wrap{max-width:670px}.verse-label{color:#a13d77}
+blockquote{font-size:clamp(27px,3vw,34px)}
+#reflection,#candle-message{color:#715669}
+.verse-controls>button{background:#fff;border:1px solid #ebc5db;color:#ad246f;border-radius:8px}
+.verse-controls>button:hover{background:#fff0f7}
+#dots button{background:#edc5dc}#dots button.active{background:#c42a80}
+.letter-section{max-width:960px;gap:55px;padding:75px 35px 90px;border-color:#f1dce8}
+.envelope{background:#fff7fb;border:1px solid #f0d3e3;border-radius:12px;box-shadow:none;padding:34px 30px}.envelope:before{display:none}
+.envelope>p{margin-top:0}.handwritten{font-size:22px}
+.remembrance{background:#fff8fc;border-block:1px solid #f5e4ee;padding:75px 24px}
+.prayer{border-color:#edd3e2}.prayer>p:last-child{font-size:22px}
+.text-button{border-bottom-color:#e4aacb}
+.closing{padding:85px 24px}.closing h2{font-size:45px}
+footer{border-color:#f1dce8;padding:24px 0}footer .brand{font-size:22px}
+.js .reveal{transition-duration:.65s}
+.welcome-active{overflow:hidden}
+.welcome{position:fixed;inset:0;z-index:20;display:grid;place-items:center;min-height:100svh;padding:30px 24px;background:#fff url('white-flower-garden.png') center/cover no-repeat;transition:opacity .65s ease,transform .65s ease}
+.welcome[hidden]{display:none}
+.welcome:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,#ffffffb8,transparent 68%);pointer-events:none}
+.welcome-content{position:relative;max-width:560px;text-align:center}
+.welcome h1{font-size:clamp(48px,6vw,76px);line-height:1.08;margin:28px 0}
+.welcome .sweet-name{color:var(--rose)}
+.welcome .rolly-name{color:#171717}
+.welcome-description{font-size:14px;line-height:1.9;color:#6d5265;margin:0 0 28px}
+.welcome-blessing{font-size:13px;line-height:1.9;color:#785b70;margin:-10px 0 28px}
+.welcome-note{font-size:11px;color:#826477;margin-top:17px}
+.welcome.leaving{opacity:0;transform:scale(1.015);pointer-events:none}
+#main-page.entered{animation:welcome-enter .75s ease both}
+@keyframes welcome-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.welcome{background-size:auto 100%}.welcome:before{background:#ffffffc4}.welcome h1{font-size:52px}.welcome-description{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.welcome{transition:none}.welcome.leaving{transform:none}#main-page.entered{animation:none}}
+.music{position:fixed;right:24px;bottom:22px;z-index:10;max-width:calc(100vw - 32px)}
+.music-toggle{display:block;margin-left:auto;border:1px solid #e6b3cf;border-radius:30px;padding:11px 18px;background:#ffffffed;color:#a31b69;font-size:12px;box-shadow:0 4px 20px #6e1e4810;backdrop-filter:blur(8px)}
+.music-toggle:hover{background:#fff0f8}
+.music-panel{position:absolute;bottom:58px;right:0;width:340px;max-width:calc(100vw - 32px);background:#fff;border:1px solid #efd8e5;border-radius:14px;padding:18px;box-shadow:0 12px 40px #48243818}
+.music-title{font-size:16px;margin:0;color:#382335}.music-title span{font-size:10px;margin-left:8px;color:#a13d77}
+.music-credit,.music-note{font-size:10px;color:#715669;line-height:1.6;margin:6px 0 12px}
+.music-frame{aspect-ratio:16/9;min-height:200px;background:#fff8fc;border-radius:7px;overflow:hidden}.music-frame iframe{width:100%;height:100%;min-height:200px;border:0;display:block}.music-frame>.music-note{padding:22px;margin:0;font-size:12px}
+.music-link{display:inline-block;font-size:11px;color:#ad246f;margin-top:10px;border-bottom:1px solid #e4aacb}
+.music-frame{aspect-ratio:auto;min-height:0;background:transparent;overflow:visible}.music-frame audio{display:block;width:100%;height:42px;margin-top:12px}.music-panel{bottom:58px;padding:16px 18px}.music-panel .music-note{margin:10px 0 0}.music-credit{margin-bottom:6px}
+.peace-panel{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(12px) scale(.98);transform-origin:bottom right;transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s}
+.peace-panel.is-open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0) scale(1);transition:opacity .3s ease,transform .3s ease,visibility 0s}
+@media(prefers-reduced-motion:reduce){.peace-panel,.peace-panel.is-open{transition:none;transform:none}}
+@media(max-width:700px){.music{right:16px;bottom:16px}.music-toggle{padding:10px 15px;font-size:11px}footer{padding-bottom:85px}}
+@media(max-width:700px){header{height:72px}.hero{height:auto;min-height:710px}.hero-content{padding:120px 25px 125px}.garden{width:210px;height:250px;opacity:.7;background-size:auto 100%}h1{font-size:clamp(43px,9vw,58px)}.intro{font-size:13px}.words{padding:65px 23px}.letter-section{grid-template-columns:1fr;gap:30px;padding:55px 4px 65px;margin:0 24px}.envelope{padding:30px 24px}.remembrance{padding:60px 22px}.closing{padding:65px 24px}.closing h2{font-size:39px}}
+@media(max-width:700px){.garden{width:100%;height:100%;opacity:1;background-image:url('white-flower-garden.png'),url('white-flower-garden.png');background-size:100% auto,100% auto;background-position:center top,center bottom;background-repeat:no-repeat}.hero:after{background:linear-gradient(#ffffff40,transparent 20%,#ffffffa6 38%,#ffffffa6 65%,transparent 85%,#fff)}}
